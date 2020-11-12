@@ -4,10 +4,8 @@ const items = [
     {name: 'jeans', info: 'blue jeans', price: 40.00}
 ];
 
-let myProducts = JSON.stringify(items);
+localStorage.setItem('products', JSON.stringify(items));
 
-localStorage.setItem('products', myProducts);
+let myProducts = JSON.parse(localStorage.getItem('products'));
 
-let savedProducts = JSON.parse(localStorage.getItem('products'));
-
-console.log(savedProducts)
+console.log(myProducts)
